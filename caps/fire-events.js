@@ -3,7 +3,7 @@
 const io = require('socket.io-client');
 const faker = require('faker');
 
-const capsConnection = io.connect('http://localhost:3000');
+const capsConnection = io.connect('http://localhost:4000');
 
 setInterval(() => {
     setTimeout(() => {
@@ -22,3 +22,5 @@ setInterval(() => {
 
     }, 3000)
 }, 3000)
+
+

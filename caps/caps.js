@@ -2,8 +2,9 @@
 'use strict';
 
 const io = require('socket.io-client');
-
-const  driverConnection = io.connect('http://localhost:3000');
+const port = 3000 ||6000;
+const ioo = require('socket.io')(port);
+const  driverConnection = io.connect('http://localhost:4000');
 
 let date = new Date();
 let year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
@@ -33,3 +34,4 @@ driverConnection.on('pickupConnection', payload => {
   
 
 })
+module.exports =ioo
