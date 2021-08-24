@@ -20,7 +20,7 @@ setInterval(() => {
         capsConnection.emit('orderd', customerOrder.orderId)
 
 
-    }, 3000)
+    }, 1500)
 }, 3000)
 
 

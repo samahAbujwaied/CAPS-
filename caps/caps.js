@@ -1,4 +1,5 @@
 
+
 'use strict';
 
 const io = require('socket.io-client');
@@ -20,13 +21,21 @@ driverConnection.on('pickupConnection', payload => {
         payload: payload,
     });
 
+  
+
+})
+driverConnection.on('in-trainstConnection', payload => {
+
     console.log('EVENT:', {
         event: 'in-trainst',
         time: `${year}-${month}-${day} T ${time}`,
         payload: payload,
     });
 
-    console.log('EVENT:', {
+
+})
+driverConnection.on('deliverdConnection', payload => {
+console.log('EVENT:', {
         event: 'deliverd',
         time: `${year}-${month}-${day} T ${time}`,
         payload: payload,
