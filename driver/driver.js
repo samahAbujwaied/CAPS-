@@ -1,3 +1,4 @@
+
 'use strict';
 
 const port = process.env.PORT || 4000;
@@ -11,12 +12,12 @@ io.on('connection', (socket) => {
         
     socket.on('in-trainst', payload => {
     
-        io.emit('pickupConnection', payload);
+        io.emit('in-trainstConnection', payload);
     });
 
     socket.on('deliverd', payload => {
         console.log('deliverd', payload.orderId)
-        io.emit('pickupConnection', payload);
+        io.emit('deliverdConnection', payload);
     });
 
     socket.on('orderd', payload => {
